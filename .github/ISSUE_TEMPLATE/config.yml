@@ -1,0 +1,9 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 Dokumentation
+    url: https://docs.webgiscloud.com/de/webgis/index.html
+    about: Bitte zuerst in der Dokumentation nachsehen (viele Fragen sind dort bereits beantwortet).
+
+  - name: 💬 Community Discussions (Fragen, How-to, Ideen)
+    url: https://github.com/e-netze/webgis-community/discussions
+    about: Für allgemeine Fragen, How-tos und Diskussionen. Für konkrete Bugs/Features/Fragen bitte Issues verwenden.
