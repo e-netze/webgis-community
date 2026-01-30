@@ -1,0 +1,69 @@
+name: 💡 Feature vorschlagen
+description: Vorschlag für eine neue Funktion oder Verbesserung (Portal/CMS/API)
+title: "[Feature]: "
+labels: ["Status: Prüfung ausstehend"]
+type: feature
+assignees:
+  - gis-eni
+body:
+  - type: dropdown
+    id: component
+    attributes:
+      label: Ziel-Komponente
+      options:
+        - Portal
+        - CMS
+        - API
+        - Andere
+        - Betrifft mehrere Komponenten
+    validations:
+      required: true
+
+  - type: dropdown
+    id: feature_type
+    attributes:
+      label: Art des Feature-Wunsches
+      options:
+        - Neue Karten-Funktion 
+        - Konfiguration/Administration im CMS
+        - API-Erweiterung
+        - UX/UI Verbesserung
+        - Performance/Skalierung
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Welches Problem soll gelöst werden?
+      description: Beschreiben Sie den fachlichen Bedarf / Schmerzpunkt.
+      placeholder: "Aktuell können Nutzer X nicht, dadurch..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Vorschlag / gewünschte Lösung
+      description: Was genau soll sich ändern? (gerne mit UI-Skizze/Beispiel)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternativen / Workaround
+      description: Gibt es einen Workaround oder eine Alternative, die Sie schon nutzen?
+    validations:
+      required: false
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Akzeptanzkriterien (optional, aber hilfreich)
+      description: Woran erkennt man, dass es fertig ist?
+      placeholder: |
+        - [ ] Nutzer können ...
+        - [ ] Im CMS kann man ...
+        - [ ] Dokumentation aktualisiert
