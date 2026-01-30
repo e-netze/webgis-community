@@ -1,0 +1,60 @@
+name: ❓ Frage / How-to / Support
+description: Frage zur Nutzung/Einrichtung/Konfiguration (bitte so konkret wie möglich)
+title: "[Frage]: "
+labels: ["Status: Prüfung ausstehend"]
+type: task
+assignees:
+  - gis-eni
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bitte nutzen Sie dieses Formular für Fragen, die sonst leicht untergehen.
+        Hinweis: Wenn es sich als Bug/Feature herausstellt, labeln wir es entsprechend um.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Worum geht es hauptsächlich?
+      options:
+        - Portal
+        - CMS
+        - API
+        - Allgemein / Architektur
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Build (falls bekannt)
+      placeholder: "v1.2.3 / 2026.01.30 / commit abc123"
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Ihre Frage
+      description: Was möchten Sie erreichen? Was ist das Ziel?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontext / Konfiguration / Beispiele
+      description: Relevante Konfiguration (z.B. WMTS/ArcGIS URL), CMS-Einstellungen, Screenshots oder Code einfügen (bitte Secrets entfernen).
+      render: text
+    validations:
+      required: false
+
+  - type: dropdown
+    id: checked_docs
+    attributes:
+      label: Dokumentation geprüft?
+      options:
+        - Ja, ich habe gesucht und nichts Passendes gefunden
+        - Teilweise
+        - Nein
+    validations:
+      required: true
