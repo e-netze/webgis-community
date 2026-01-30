@@ -1,0 +1,102 @@
+name: 🐞 Fehler melden (Bug)
+description: Melden Sie einen Fehler, damit wir ihn reproduzieren und beheben können
+title: "[Bug]: "
+labels: ["Status: Prüfung ausstehend"]
+type: bug
+assignees:
+  - gis-eni
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke fürs Melden! Bitte geben Sie alle Infos an, damit wir den Fehler zuverlässig nachstellen können.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Betroffene Komponente
+      options:
+        - Portal
+        - CMS
+        - API
+        - Andere
+        - Unklar / Bitte helfen zuzuordnen
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version / Build
+      description: Welche Version ist im Einsatz? (z.B. Tag/Release, Commit, Docker-Tag, Build-Nr.)
+      placeholder: "v1.2.3 / 2026.01.30 / commit abc123"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Umgebung
+      options:
+        - Produktion
+        - Staging/Test
+        - Lokal/Entwicklung
+    validations:
+      required: true
+
+  - type: input
+    id: browser
+    attributes:
+      label: Browser (falls Portal/CMS)
+      description: Browser + Version (z.B. Chrome 121, Edge 120, Firefox 122)
+      placeholder: "Chrome 121"
+
+  - type: input
+    id: os
+    attributes:
+      label: Betriebssystem (falls Portal/CMS)
+      placeholder: "Windows 11 / macOS 14 / iOS / Android"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Fehlerbeschreibung
+      description: Was passiert? Bitte konkret.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Schritte zum Reproduzieren
+      description: Bitte so beschreiben, dass wir es nachstellen können.
+      placeholder: |
+        1. Im CMS Dienst X registrieren (WMTS/ArcGIS ...)
+        2. Im Portal Layer aktivieren
+        3. Zoom auf ...
+        4. Ergebnis: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Erwartetes Verhalten
+      description: Was hätten Sie erwartet?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Tatsächliches Verhalten / Fehlermeldung
+      description: Fehlermeldung, Screenshots, Console-Ausgaben etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs (API/CMS/Portal)
+      description: Relevante Logs/Stacktraces einfügen (bitte Secrets/Passwörter entfernen).
+      render: text
