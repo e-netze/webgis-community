@@ -2,7 +2,7 @@ name: 💡 Feature vorschlagen
 description: Vorschlag für eine neue Funktion oder Verbesserung (Portal/CMS/API)
 title: "[Feature]: "
 labels: ["Status: Prüfung ausstehend"]
-type: question
+type: feature
 assignees:
   - gis-eni
 body:
