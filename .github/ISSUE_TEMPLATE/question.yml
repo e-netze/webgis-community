@@ -2,7 +2,7 @@ name: ❓ Frage / How-to / Support
 description: Frage zur Nutzung/Einrichtung/Konfiguration (bitte so konkret wie möglich)
 title: "[Frage]: "
 labels: ["Status: Prüfung ausstehend"]
-type: task
+type: question
 assignees:
   - gis-eni
 body:
