@@ -2,7 +2,7 @@ name: 💡 Feature vorschlagen
 description: Vorschlag für eine neue Funktion oder Verbesserung (Portal/CMS/API)
 title: "[Feature]: "
 labels: ["Status: Prüfung ausstehend"]
-type: feature
+type: question
 assignees:
   - gis-eni
 body:
@@ -61,9 +61,11 @@ body:
   - type: textarea
     id: acceptance
     attributes:
-      label: Akzeptanzkriterien (optional, aber hilfreich)
+      label: Akzeptanzkriterien 
       description: Woran erkennt man, dass es fertig ist?
       placeholder: |
         - [ ] Nutzer können ...
         - [ ] Im CMS kann man ...
         - [ ] Dokumentation aktualisiert
+    validations:
+      required: true
